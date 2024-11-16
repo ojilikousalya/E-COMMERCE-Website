@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home Decor Store</title>
+    <link rel="stylesheet" href="ecomm.css">
+    <!-- <link rel="html" href="Furniture.html"> -->
+
+</head>
+
+<body>
+    <!-- Header Section -->
+    <header>
+        <div class="top-bar">
+            <div class="logo">Home Decor</div>
+            <input type="text" placeholder="What can we help you find?">
+            <div class="user-links">
+                <a href="signin.html">Orders & Sign In</a>
+                <!-- <a href="signin.html">Sign In</a> -->
+                <span>🖤</span>
+                <span>🛒 (0)</span>
+            </div>
+        </div>
+        <nav class="main-nav">
+            <!-- <a href="#">Furniture</a> -->
+            <!-- <a href="#">Outdoor</a> -->
+            <a href="kitchen.html">Kitchen</a>
+            <a href="Tabletop&Bar.html">Tabletop & Bar</a>
+            <a href="decor&pillows.html">Decor & Pillows</a>
+            <a href="rugs.html">Rugs</a>
+            <a href="lighting.html">Lighting</a>
+            <a href="bedding-bath.html">Bedding & Bath</a>
+            <a href="gifts.html">Gifts</a>
+            <a href="Furniture.html">Furniture</a>
+            <a href="outdoor.html">Outdoor</a>
+            
+
+            <!-- Add other links as necessary -->
+            <!-- Add this wherever you want the Sign-In button on your main page (ecomm.html) -->
+            <!-- <button onclick="window.location.href='signin.html'">Sign In</button> -->
+            <!-- Sign-In button above the navbar in ecomm.html -->
+            <!-- <button onclick="window.location.href='signin.html'" class="signin-btn">Sign In</button> -->
+
+
+        </nav>
+       
+    </header>
+    <!-- <a href="signin.html">Sign In</a> -->
+    <!-- <a href="signin.html" class="signin-btn">Sign In</a> -->
+
+    <!-- <button onclick="window.location.href='signin.html'" class="signin-btn">Sign In</button> -->
+    <!-- Banner Section -->
+    <!-- <section class="banner">
+        <div class="banner-content">
+            <p>UP TO 60% OFF: 4th of July Event</p>
+            <button>Shop Deals</button>
+        </div>
+    </section> -->
+
+    <!-- Add more sections for product categories, etc. -->
+    <!-- Banner Section -->
+    <section class="banner">
+        <div class="banner-content">
+            <p>GOING, GOING, ALMOST GONE</p>
+            <h2>Up to 60% off: 4th of July Event</h2>
+            <button>Shop Deals</button>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 Home Decor Store</p>
+    </footer>
+
+    <script src="ecomm.js">
+        
+// Example array of product objects
+const products = [
+    { name: 'Modern Sofa', description: 'A sleek, modern sofa perfect for any living room.' },
+    { name: 'Tent', description: 'A durable, weather-resistant tent for camping.' },
+    { name: 'Camping Chair', description: 'A foldable camping chair with extra padding.' },
+    { name: 'Scented Candle', description: 'A beautifully scented candle perfect for relaxation.' },
+    // Add other products here...
+];
+
+function searchProducts() {
+    const query = document.getElementById('searchInput').value.toLowerCase();
+    const resultsContainer = document.getElementById('searchResults');
+    resultsContainer.innerHTML = ''; // Clear previous results
+
+    // Filter products based on the search query
+    const filteredProducts = products.filter(product => 
+        product.name.toLowerCase().includes(query) || 
+        product.description.toLowerCase().includes(query)
+    );
+
+    // Display filtered results
+    if (filteredProducts.length > 0) {
+        filteredProducts.forEach(product => {
+            const productDiv = document.createElement('div');
+            productDiv.classList.add('product-result');
+            productDiv.innerHTML = `<h3>${product.name}</h3><p>${product.description}</p>`;
+            resultsContainer.appendChild(productDiv);
+        });
+    } else {
+        resultsContainer.innerHTML = '<p>No results found.</p>';
+    }
+}
+</script>
+<div class="search-bar">
+    <input type="text" id="searchInput" placeholder="Search for products...">
+    <button onclick="searchProducts()">Search</button>
+</div>
+<div id="searchResults" class="search-results"></div>
+
+</body>
+
+
+</html>

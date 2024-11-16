@@ -1,0 +1,98 @@
+/* Styles specific to the sign-in page */
+.signin-section {
+    max-width: 400px;
+    margin: 50px auto;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    background-color: #fff;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.signin-section h1 {
+    font-size: 2em;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.form-group {
+    margin-bottom: 15px;
+    text-align: left;
+}
+
+.form-group label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.form-group input {
+    width: 100%;
+    padding: 10px;
+    font-size: 1em;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+
+button[type="submit"] {
+    padding: 10px 15px;
+    font-size: 1em;
+    color: white;
+    background-color: #4CAF50;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    width: 100%;
+    margin-top: 10px;
+}
+
+button[type="submit"]:hover {
+    background-color: #45a049;
+}
+
+.signin-section p {
+    margin-top: 15px;
+}
+
+.signin-section a {
+    color: #4CAF50;
+    text-decoration: none;
+}
+
+.signin-section a:hover {
+    text-decoration: underline;
+}
+.signin-btn {
+    position: relative; /* Adjust as needed */
+    padding: 10px 20px;
+    font-size: 1em;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.signin-btn:hover {
+    background-color: #45a049;
+}
+.back-home-btn {
+    display: inline-block;
+    margin: 15px;
+    padding: 10px 20px;
+    background-color: #4CAF50; /* Green color for Back to Home */
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1em;
+    text-transform: uppercase;
+    transition: background-color 0.3s ease;
+}
+
+.back-home-btn:hover {
+    background-color: #388E3C; /* Darker green for hover effect */
+}
+
